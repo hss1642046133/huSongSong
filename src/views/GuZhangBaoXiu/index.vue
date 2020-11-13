@@ -9,9 +9,26 @@
         </div>
         <div class="zhuti-div2">
           <el-tabs v-model="activeName" type="card" @tab-click="handleClick">
-            <el-tab-pane label="用户管理" name="first">用户管理</el-tab-pane>
-            <el-tab-pane label="配置管理" name="second">配置管理</el-tab-pane>
+            <el-tab-pane label="公共报修 （4 | 2）" name="first">
+              <GongGongBaoXiu></GongGongBaoXiu>
+            </el-tab-pane>
+            <el-tab-pane label="个人报修 （4 | 2）" name="second">
+              <GeRenBaoXiu></GeRenBaoXiu>
+            </el-tab-pane>
           </el-tabs>
+          <div class="shuifei-div2-div1">
+            <ul class="shuifei-div2-div1-ul">
+              <li>
+                <span>总账单数:100/条</span>
+                <span>页数:1/9</span>
+                <span>每页:12/条</span>
+              </li>
+              <li>
+                <el-pagination background layout="prev, pager, next" :total="90">
+                </el-pagination>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -21,11 +38,15 @@
 <script>
 import Header from "../../components/Header";
 import Sidebar from "../../components/Sidebar";
+import GongGongBaoXiu from "../../components/GongGongBaoXiu";
+import GeRenBaoXiu from "../../components/GeRenBaoXiu";
 export default {
   name: "GuZhangBaoXiu",
   components: {
     Header,
     Sidebar,
+    GongGongBaoXiu,
+    GeRenBaoXiu
   },
   data() {
     return {
@@ -64,7 +85,7 @@ export default {
 .zhuti-div1 {
   margin-right: 5px;
   height: 33px;
-  background: linear-gradient(to right, #b6a4fe, #faf9fe);
+  background: linear-gradient(to right, #623bfe, #faf9fe);
   display: flex;
   align-items: center;
 }
@@ -81,7 +102,24 @@ export default {
   border-bottom: 1px solid #ededff;
   margin-right: 5px;
 }
-::v-deep .el-tabs--card>.el-tabs__header .el-tabs__nav {
+::v-deep .el-tabs--card > .el-tabs__header .el-tabs__nav {
   border-radius: 0;
+}
+::v-deep .el-tabs__item.is-active {
+  background-color: #623bfe;
+  color: #ffffff;
+}
+.shuifei-div2-div1{
+  border-top: 1px solid #f0f0ff;
+  padding: 10px 0;
+  margin-top: 100px;
+}
+.shuifei-div2-div1-ul{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.shuifei-div2-div1-ul li:nth-of-type(1) span~span{
+  margin-left: 20px;
 }
 </style>

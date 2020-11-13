@@ -1,7 +1,7 @@
 <template>
   <div id="dianfei">
     <div class="dianfei-div1">
-      <el-button @click="Click1" type="primary" plain>查看历史账单</el-button>
+      <el-button @click="Click" type="primary" plain>查看历史账单</el-button>
     </div>
     <div class="dianfei-div2">
       <ul class="dianfei-div2-ul">
@@ -179,12 +179,12 @@
     <div class="dianfei-div3">
       <ul class="dianfei-div3-ul">
         <li>
-          <span>待缴账单数:100/条</span>
+          <span>总账单数:100/条</span>
           <span>页数:1/9</span>
           <span>每页:12/条</span>
         </li>
         <li>
-          <el-pagination background layout="prev, pager, next" :total="1000">
+          <el-pagination background layout="prev, pager, next" :total="90">
           </el-pagination>
         </li>
       </ul>
@@ -196,8 +196,8 @@
 export default {
   name: "DianFei",
   methods: {
-    Click1: function () {
-      this.$router.push("/");
+    Click: function () {
+      this.$router.push("/jiaofeichaxun");
     },
   },
 };

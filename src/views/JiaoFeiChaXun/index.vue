@@ -30,7 +30,7 @@
             </div>
           </div>
           <div class="zhuti-div2-div2">
-            <el-table :header-cell-style="{background:'#409EFF',color:'#ffffff'}" :data="tableData" border style="width: 100%">
+            <el-table :header-cell-style="{background:'#623bfe',color:'#ffffff'}" :data="tableData" border style="width: 100%">
               <el-table-column header-align="center" align="center" prop="date" label="日期" width="160">
               </el-table-column>
               <el-table-column header-align="center" align="center" prop="type" label="缴费类型" width="150">
@@ -50,12 +50,12 @@
           <div class="shuifei-div2-div3">
             <ul class="shuifei-div2-div3-ul">
               <li>
-                <span>待缴账单数:100/条</span>
+                <span>总账单数:100/条</span>
                 <span>页数:1/9</span>
-                <span>每页:9/条</span>
+                <span>每页:12/条</span>
               </li>
               <li>
-                <el-pagination background layout="prev, pager, next" :total="1000">
+                <el-pagination background layout="prev, pager, next" :total="90">
                 </el-pagination>
               </li>
             </ul>
@@ -70,7 +70,7 @@
 import Header from "../../components/Header";
 import Sidebar from "../../components/Sidebar";
 export default {
-  name: "WuYeChaXun",
+  name: "JiaoFeiChaXun",
   components: {
     Header,
     Sidebar,
@@ -206,7 +206,7 @@ export default {
 .zhuti-div1 {
   margin-right: 5px;
   height: 33px;
-  background: linear-gradient(to right, #b6a4fe, #faf9fe);
+  background: linear-gradient(to right, #623bfe, #faf9fe);
   display: flex;
   align-items: center;
 }

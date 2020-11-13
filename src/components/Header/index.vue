@@ -152,7 +152,7 @@ export default {
   margin-left: 10px;
 }
 .header-div1-div1 span {
-  font-size: 14px;
+  font-size: 32px;
   color: #ffffff;
   font-weight: bold;
   margin-left: 10px;
@@ -185,7 +185,7 @@ i {
   margin-right: 25px;
 }
 .style1 {
-  background: #957bfe;
+  background: #623bfe;
 }
 .style2 {
   background: #ff0000;
@@ -200,7 +200,7 @@ i {
   background: #008000;
 }
 .style6 {
-  background: #957bfe;
+  background: #623bfe;
 }
 .xgmm-el-input{
   margin-top: 10px;

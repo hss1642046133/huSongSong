@@ -1,7 +1,7 @@
 <template>
   <div id="shuifei">
     <div class="shuifei-div1">
-      <el-button @click="Click1" type="primary" plain>查看历史账单</el-button>
+      <el-button @click="Click" type="primary" plain>查看历史账单</el-button>
     </div>
     <div class="shuifei-div2">
       <ul class="shuifei-div2-ul">
@@ -184,7 +184,7 @@
           <span>每页:9/条</span>
         </li>
         <li>
-          <el-pagination background layout="prev, pager, next" :total="1000">
+          <el-pagination background layout="prev, pager, next" :total="90">
           </el-pagination>
         </li>
       </ul>
@@ -196,8 +196,8 @@
 export default {
   name: "ShuiFei",
   methods: {
-    Click1: function () {
-      this.$router.push("/");
+    Click: function () {
+      this.$router.push("/jiaofeichaxun");
     },
   },
 };

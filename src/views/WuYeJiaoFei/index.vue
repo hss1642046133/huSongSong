@@ -73,7 +73,7 @@ export default {
 .zhuti-div1 {
   margin-right: 5px;
   height: 33px;
-  background: linear-gradient(to right, #b6a4fe, #faf9fe);
+  background: linear-gradient(to right, #623bfe, #faf9fe);
   display: flex;
   align-items: center;
 }
@@ -112,7 +112,7 @@ export default {
 }
 .el-button--primary.is-plain:focus,
 .el-button--primary.is-plain:hover {
-  background: #957bfe;
+  background: #623bfe;
   border: 1px solid #d4cafe;
 }
 .zhuti-div3 {

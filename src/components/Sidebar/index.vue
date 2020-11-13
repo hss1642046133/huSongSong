@@ -13,15 +13,22 @@
             </template>
             <el-menu-item-group>
               <el-menu-item index="/wuyejiaofei/shuifei">物业缴费</el-menu-item>
-              <el-menu-item index="/wuyechaxun">缴费查询</el-menu-item>
+              <el-menu-item index="/jiaofeichaxun">缴费查询</el-menu-item>
               <el-menu-item index="/guzhangbaoxiu">故障报修</el-menu-item>
               <el-menu-item index="/gonggaoguanli">公告管理</el-menu-item>
             </el-menu-item-group>
           </el-submenu>
-          <el-menu-item index="3">
-            <i class="el-icon-first-aid-kit"></i>
-            <span slot="title"></span>
-          </el-menu-item>
+         <el-submenu index="2">
+            <template slot="title">
+              <i class="el-icon-first-aid-kit"></i>
+              <span>社区医疗</span>
+            </template>
+            <el-menu-item-group>
+              <el-menu-item index="/yuyueguahao">预约挂号</el-menu-item>
+              <el-menu-item index="/jiankangxiaotieshi">健康小贴士</el-menu-item>
+              <el-menu-item index="2-3">医生简介</el-menu-item>
+            </el-menu-item-group>
+          </el-submenu>
           <el-submenu index="4">
             <template slot="title">
               <i class="el-icon-menu"></i>
