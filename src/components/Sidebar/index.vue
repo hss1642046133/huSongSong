@@ -36,12 +36,13 @@
             </template>
             <el-submenu index="4-1">
               <template slot="title">智能停车</template>
-              <el-menu-item index="4-1-1">车位录入</el-menu-item>
-              <el-menu-item index="4-1-2">车辆管理</el-menu-item>
-              <el-menu-item index="4-1-3">停车记录</el-menu-item>
+              <el-menu-item index="/zhinengtinche">智能停车</el-menu-item>
+              <el-menu-item index="/cheweiluru">车位录入</el-menu-item>
+              <el-menu-item index="/cheliangguanli">车辆管理</el-menu-item>
+              <el-menu-item index="/tinchejilu">停车记录</el-menu-item>
             </el-submenu>
             <el-menu-item-group>
-              <el-menu-item index="4-2">智能开门</el-menu-item>
+              <el-menu-item index="/zhinengkaimen">智能开门</el-menu-item>
             </el-menu-item-group>
           </el-submenu>
           <el-submenu index="5">
@@ -50,8 +51,8 @@
               <span>数据统计</span>
             </template>
             <el-menu-item-group>
-              <el-menu-item index="5-1">房屋分类统计</el-menu-item>
-              <el-menu-item index="5-2">缴费分析统计</el-menu-item>
+              <el-menu-item index="/fangwufenleitongji">房屋分类统计</el-menu-item>
+              <el-menu-item index="/jiaofeifenxitongji">缴费分析统计</el-menu-item>
             </el-menu-item-group>
           </el-submenu>
           <el-submenu index="6">
@@ -60,7 +61,7 @@
               <span>基本信息</span>
             </template>
             <el-menu-item-group>
-              <el-menu-item index="6-1">房屋信息</el-menu-item>
+              <el-menu-item index="/fangwuxinxi">房屋信息</el-menu-item>
               <el-menu-item index="6-2">人口信息</el-menu-item>
               <el-menu-item index="6-3">设备信息</el-menu-item>
               <el-menu-item index="6-4">电子地图</el-menu-item>

@@ -33,10 +33,10 @@ export default {
             radius: "55%",
             center: ["50%", "60%"],
             data: [
-              { value: 170, name: "毛坏" },
-              { value: 170, name: "简装" },
-              { value: 230, name: "糖装" },
-              { value: 350, name: "豪华装饰" },
+              { value: 170, name: "毛坏",itemStyle:{ normal:{ color:'#3aa1ff' } }},
+              { value: 170, name: "简装",itemStyle:{ normal:{ color:'#36cbcb' } } },
+              { value: 230, name: "糖装",itemStyle:{ normal:{ color:'#4ecb73' } } },
+              { value: 350, name: "豪华装饰",itemStyle:{ normal:{ color:'#fbd437' } } },
             ],
             emphasis: {
               itemStyle: {

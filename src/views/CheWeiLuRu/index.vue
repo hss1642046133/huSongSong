@@ -5,7 +5,7 @@
       <Sidebar id="sidebar"></Sidebar>
       <div id="zhuti">
         <div class="zhuti-div1">
-          <p>健康小贴士</p>
+          <p>车位录入</p>
         </div>
         <div class="zhuti-div2">
           <div class="zhuti-div2-div1">
@@ -13,43 +13,42 @@
               <span class="demonstration">开始日期：</span>
               <el-date-picker v-model="value1" align="right" type="date" placeholder="年/月/日" :picker-options="pickerOptions">
               </el-date-picker>
-              <span class="demonstration" style="margin-left: 20px;">结束日期：</span>
+            </div>
+            <div class="block">
+              <span class="demonstration">结束日期：</span>
+              <el-date-picker v-model="value2" align="right" type="date" placeholder="年/月/日" :picker-options="pickerOptions">
+              </el-date-picker>
+            </div>
+            <div class="block">
               <el-date-picker v-model="value2" align="right" type="date" placeholder="年/月/日" :picker-options="pickerOptions">
               </el-date-picker>
             </div>
             <div class="block">
               <el-button type="primary" class="chaxun">查询</el-button>
-              <el-button type="primary" class="chaxun" @click="dialogVisible = true">发布小贴士</el-button>
             </div>
-            <el-dialog title="发布小贴士" :visible.sync="dialogVisible" width="30%" :before-close="handleClose">
-              <div class="blocks">
-                <span class="demonstration">键康标题：</span>
-                <el-date-picker style="width: 80%;" v-model="value2" align="right" type="date" placeholder="选择日期" :picker-options="pickerOptions">
-                </el-date-picker>
-              </div>
-              <div class="blocks1">
-                <span class="demonstration">键康内容：</span>
-                <el-input class="kd" type="textarea" :rows="2" placeholder="请输入内容" v-model="textarea"></el-input>
-              </div>
-              <div class="blocks1">
-                <span class="demonstration">备&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注：</span>
-                <el-input class="kd" style="margin-left: -1px;" type="textarea1" :rows="2" placeholder="请输入内容" v-model="textarea"></el-input>
-              </div>
-              <span slot="footer" class="dialog-footer">
-                <el-button @click="dialogVisible = false">取 消</el-button>
-                <el-button type="primary" @click="dialogVisible = false">确 定</el-button>
-              </span>
-            </el-dialog>
+            <div class="block">
+              <el-button type="primary" class="chaxun">车位录入</el-button>
+            </div>
           </div>
           <div class="zhuti-div2-div2">
             <el-table :header-cell-style="{background:'#623bfe',color:'#ffffff'}" :data="tableData" border style="width: 100%">
-              <el-table-column header-align="center" align="center" prop="date" label="发布日期" width="210">
+              <el-table-column header-align="center" align="center" prop="date" label="录入日期" width="160">
               </el-table-column>
-              <el-table-column header-align="center" align="center" prop="headline" label="健康标题" width="210">
+              <el-table-column header-align="center" align="center" prop="park" label="停车场名称" width="120">
               </el-table-column>
-              <el-table-column header-align="center" align="center" prop="content" label="健康内容" width="210">
+              <el-table-column header-align="center" align="center" prop="location" label="车库位置" width="150">
+                <div>
+                  <span>A区 地下停车场...</span>
+                  <i class="el-icon-location"></i>
+                </div>
               </el-table-column>
-              <el-table-column header-align="center" align="center" prop="remark" label="备注" width="210">
+              <el-table-column header-align="center" align="center" prop="identification" label="车位标识" width="120">
+              </el-table-column>
+              <el-table-column header-align="center" align="center" prop="photograph" label="车位照片" width="120">
+              </el-table-column>
+              <el-table-column header-align="center" align="center" prop="owner" label="车为业主" width="120">
+              </el-table-column>
+              <el-table-column header-align="center" align="center" prop="vehicle" label="停放车辆（车牌）" width="140">
               </el-table-column>
               <el-table-column header-align="center" align="center" prop="operation" label="操作">
                 <div class="el-table-column-div">
@@ -61,6 +60,19 @@
               </el-table-column>
             </el-table>
           </div>
+          <div class="shuifei-div2-div3">
+            <ul class="shuifei-div2-div3-ul">
+              <li>
+                <span>总账单数:100/条</span>
+                <span>页数:1/9</span>
+                <span>每页:12/条</span>
+              </li>
+              <li>
+                <el-pagination background layout="prev, pager, next" :total="90">
+                </el-pagination>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -71,7 +83,7 @@
 import Header from "../../components/Header";
 import Sidebar from "../../components/Sidebar";
 export default {
-  name: "JianKangXiaoTieShi",
+  name: "CheWeiLuRu",
   components: {
     Header,
     Sidebar,
@@ -112,45 +124,46 @@ export default {
       tableData: [
         {
           date: "2019-09-01 10:12:11",
-          headline: "标题1",
-          content: "内容1",
-          remark: "xxx",
-          operation: "删除",
+          park: "A区 停车场",
+          location: "位置1......",
+          identification: "xxx标识1",
+          photograph: "照片1",
+          owner: "张xx",
+          vehicle: "京A~F0236",
+          operation:'删除'
         },
         {
           date: "2019-09-01 10:12:11",
-          headline: "标题2",
-          content: "内容2",
-          remark: "xxx",
-          operation: "删除",
+          park: "B区 停车场",
+          location: "位置2......",
+          identification: "xxx标识2",
+          photograph: "照片2",
+          owner: "张xx",
+          vehicle: "粤B~F1236",
+          operation:'删除'
         },
         {
           date: "2019-09-01 10:12:11",
-          headline: "标题3",
-          content: "内容3",
-          remark: "xxx",
-          operation: "删除",
+          park: "C区 停车场",
+          location: "位置3......",
+          identification: "xxx标识3",
+          photograph: "照片3",
+          owner: "张xx",
+          vehicle: "湘A~0392",
+          operation:'删除'
         },
         {
           date: "2019-09-01 10:12:11",
-          headline: "标题4",
-          content: "内容4",
-          remark: "xxx",
-          operation: "删除",
+          park: "D区 停车场",
+          location: "位置4......",
+          identification: "xxx标识4",
+          photograph: "照片4",
+          owner: "张xx",
+          vehicle: "湘F~0312",
+          operation:'删除'
         }
-      ],
-      dialogVisible: false,
-      textarea: '',
-      textarea1: ''
+      ]
     };
-  },
-  methods: {
-    handleClose(done) {
-      this.$confirm('确认关闭？')
-        .then(_ => {
-            done();
-      }).catch(_ => {});
-    }
   }
 };
 </script>
@@ -196,19 +209,16 @@ export default {
 }
 .zhuti-div2-div1 {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-top: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 .chaxun {
-  width: 120px;
+  width: 100px;
   margin-right: 30px;
   margin: 0;
-  margin-left: 10px;
 }
 .el-date-editor.el-input, .el-date-editor.el-input__inner {
-    width: 180px;
+    width: 200px;
 }
 .zhuti-div2-div2{
   margin: 20px 10px 200px 10px;
@@ -223,6 +233,9 @@ export default {
 }
 .el-table-column-div-ul li:nth-of-type(2){
   color: red;
+}
+.el-table-column-div-ul li:nth-of-type(3){
+  color: #623bfe;
 }
 ::v-deep .el-dialog__header {
   background-color: #623bfe;
@@ -243,5 +256,22 @@ export default {
 }
 ::v-deep .kd{
   width: 80%;
+}
+i{
+  color: #623bfe;
+  font-size: 20px;
+}
+.shuifei-div2-div3{
+  border-top: 1px solid #f0f0ff;
+  padding: 10px 0;
+  margin-top: 100px;
+}
+.shuifei-div2-div3-ul{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.shuifei-div2-div3-ul li:nth-of-type(1) span~span{
+  margin-left: 20px;
 }
 </style>

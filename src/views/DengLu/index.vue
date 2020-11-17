@@ -4,7 +4,7 @@
       <div class="content-div1-div1">XXX智慧社区管理系统</div>
       <div class="content-div1-div2">
         <div class="content-div1-div2-div1">
-          <img src="../../assets/images/DengLuImg/u794.png" />
+          <img src="../../assets/images/DengLu/u794.png" />
         </div>
         <div class="content-div1-div2-div2">
           <!-- <el-input placeholder="请输入用户名" v-model="input" clearable></el-input><br/>
@@ -84,7 +84,7 @@ export default {
 
 <style type="text/css" scoped>
 #content {
-  background-image: url("../../assets/images/DengLuImg/bg.png");
+  background-image: url("../../assets/images/DengLu/bg.png");
   height: 100%;
   display: flex;
   align-items: center;
@@ -138,4 +138,5 @@ export default {
 #denglu{
   margin-top: -10px;
 }
+
 </style>

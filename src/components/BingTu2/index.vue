@@ -33,9 +33,9 @@ export default {
             radius: "55%",
             center: ["50%", "60%"],
             data: [
-              { value: 115, name: "正在预约" },
-              { value: 170, name: "预约成功" },
-              { value: 250, name: "预约失败" }
+              { value: 115, name: "正在预约",itemStyle:{ normal:{ color:'#3aa1ff' } } },
+              { value: 170, name: "预约成功",itemStyle:{ normal:{ color:'#36cbcb' } } },
+              { value: 250, name: "预约失败",itemStyle:{ normal:{ color:'#4ecb73' } } }
             ],
             emphasis: {
               itemStyle: {

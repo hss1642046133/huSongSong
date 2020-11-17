@@ -1,6 +1,6 @@
 <template>
   <div id="bingtu">
-    <div id="chartPie3" style="width: 100%; height: 400px; margin-top: -80px"></div>
+    <div id="chartPie7" style="width: 100%; height: 400px; margin-top: -90px"></div>
   </div>
 </template>
 
@@ -10,21 +10,21 @@ export default {
   name: "BingTu3",
   data() {
     return {
-      chartPie3: null,
+      chartPie7: null
     };
   },
   methods: {
     drawPieChart() {
-      this.chartPie3 = echarts.init(document.getElementById("chartPie3"));
-      this.chartPie3.setOption({
+      this.chartPie7 = echarts.init(document.getElementById("chartPie7"));
+      this.chartPie7.setOption({
         tooltip: {
           trigger: "item",
-          formatter: "{a} <br/>{b}: {c} ({d}%)",
+          formatter: "{a} <br/>{b}: {c} ({d}%)"
         },
         legend: {
           left: "center",
-          bottom: 50,
-          data: ["正在处理", "已修复", "未修复"],
+          bottom: 60,
+          data: ["出场", "入场"]
         },
         series: [
           {
@@ -34,33 +34,40 @@ export default {
             avoidLabelOverlap: false,
             label: {
               show: false,
-              position: "center",
+              position: "center"
             },
             emphasis: {
               label: {
                 show: true,
                 fontSize: "30",
-                fontWeight: "bold",
-              },
+                fontWeight: "bold"
+              }
             },
             labelLine: {
-              show: false,
+              show: false
             },
             data: [
-              { value: 230, name: "正在处理",itemStyle:{ normal:{ color:'#3aa1ff' } }  },
-              { value: 360, name: "已修复",itemStyle:{ normal:{ color:'#36cbcb' } }  },
-              { value: 440, name: "未修复",itemStyle:{ normal:{ color:'#4ecb73' } }  }
-            ],
-          },
-        ],
+              {
+                value: 76,
+                name: "出场",
+                itemStyle: { normal: { color: "#3aa1ff" } }
+              },
+              {
+                value: 23,
+                name: "入场",
+                itemStyle: { normal: { color: "#36cbcb" } }
+              }
+            ]
+          }
+        ]
       });
     },
     drawCharts() {
       this.drawPieChart();
-    },
+    }
   },
-  mounted: function () {
+  mounted: function() {
     this.drawCharts();
-  },
+  }
 };
 </script>

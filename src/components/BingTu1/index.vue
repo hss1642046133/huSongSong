@@ -47,9 +47,9 @@ export default {
               show: false,
             },
             data: [
-              { value: 230, name: "在线" },
-              { value: 360, name: "离线" },
-              { value: 440, name: "忙碌" }
+              { value: 230, name: "在线",itemStyle:{ normal:{ color:'#3aa1ff' } } },
+              { value: 360, name: "离线",itemStyle:{ normal:{ color:'#36cbcb' } } },
+              { value: 440, name: "忙碌",itemStyle:{ normal:{ color:'#4ecb73' } } }
             ],
           },
         ],

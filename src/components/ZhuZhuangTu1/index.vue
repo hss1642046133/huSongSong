@@ -1,6 +1,6 @@
 <template>
   <div id="zhuzhuangtu">
-    <div id="chartPie4" style="width: 100%; height: 260px;margin-top: -20px;"></div>
+    <div id="chartPie5" style="width: 100%; height: 280px;margin-top: -40px;"></div>
   </div>
 </template>
 
@@ -10,13 +10,13 @@ export default {
   name: "ZhuZhuangTu",
   data() {
     return {
-      chartPie4: null,
+      chartPie5: null,
     };
   },
   methods: {
     drawPieChart() {
-      this.chartPie4 = echarts.init(document.getElementById("chartPie4"));
-      this.chartPie4.setOption({
+      this.chartPie5 = echarts.init(document.getElementById("chartPie5"));
+      this.chartPie5.setOption({
         color: ["#38a0ff"],
         tooltip: {
           trigger: "axis",
@@ -34,7 +34,7 @@ export default {
         xAxis: [
           {
             type: "category",
-            data: ["水费", "电费", "停车费", "燃气费", "固化宽带费", "有线电视费", "物业费"],
+            data: ["昨天", "今天"],
             axisTick: {
               alignWithLabel: true,
               fontSize: 12
@@ -50,8 +50,8 @@ export default {
           {
             name: "直接访问",
             type: "bar",
-            barWidth: "60%",
-            data: [1000, 2500, 2000, 2000, 1500, 250, 750],
+            barWidth: "40%",
+            data: [5.5, 9.6],
           },
         ],
       });

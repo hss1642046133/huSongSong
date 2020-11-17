@@ -81,6 +81,54 @@ export default new Router({
       path: '/jiankangxiaotieshi',
       name: 'JianKangXiaoTieShi',
       component: () => import('./views/JianKangXiaoTieShi')
+    },
+    //智能停车
+    {
+      path: '/zhinengtinche',
+      name: 'ZhiNengTinChe',
+      component: () => import('./views/ZhiNengTinChe')
+    },
+    //车位录入
+    {
+      path: '/cheweiluru',
+      name: 'CheWeiLuRu',
+      component: () => import('./views/CheWeiLuRu')
+    },
+    //车辆管理
+    {
+      path: '/cheliangguanli',
+      name: 'CheLiangGuanLi',
+      component: () => import('./views/CheLiangGuanLi')
+    },
+    //停车记录
+    {
+      path: '/tinchejilu',
+      name: 'TinCheJiLu',
+      component: () => import('./views/TinCheJiLu')
+    },
+    //智能开门
+    {
+      path: '/zhinengkaimen',
+      name: 'ZhiNengKaiMen',
+      component: () => import('./views/ZhiNengKaiMen')
+    },
+    //房屋分类统计
+    {
+      path: '/fangwufenleitongji',
+      name: 'FangWuFenLeiTongJi',
+      component: () => import('./views/FangWuFenLeiTongJi')
+    },
+    //缴费分析统计
+    {
+      path: '/jiaofeifenxitongji',
+      name: 'JiaoFeiFenXiTongJi',
+      component: () => import('./views/JiaoFeiFenXiTongJi')
+    },
+    //房屋信息
+    {
+      path: '/fangwuxinxi',
+      name: 'FangWuXinXi',
+      component: () => import('./views/FangWuXinXi')
     }
   ]
 })
