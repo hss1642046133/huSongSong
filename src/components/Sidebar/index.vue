@@ -62,8 +62,8 @@
             </template>
             <el-menu-item-group>
               <el-menu-item index="/fangwuxinxi">房屋信息</el-menu-item>
-              <el-menu-item index="6-2">人口信息</el-menu-item>
-              <el-menu-item index="6-3">设备信息</el-menu-item>
+              <el-menu-item index="/renkouxinxi">人口信息</el-menu-item>
+              <el-menu-item index="/shebeixinxi">设备信息</el-menu-item>
               <el-menu-item index="6-4">电子地图</el-menu-item>
             </el-menu-item-group>
           </el-submenu>
@@ -73,8 +73,8 @@
               <span>系统管理</span>
             </template>
             <el-menu-item-group>
-              <el-menu-item index="7-1">用户管理</el-menu-item>
-              <el-menu-item index="7-2">角色管理</el-menu-item>
+              <el-menu-item index="/yonghuguanli">用户管理</el-menu-item>
+              <el-menu-item index="/jueseguanli">角色管理</el-menu-item>
               <el-menu-item index="7-3">权限管理</el-menu-item>
             </el-menu-item-group>
           </el-submenu>

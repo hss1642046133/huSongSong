@@ -129,6 +129,30 @@ export default new Router({
       path: '/fangwuxinxi',
       name: 'FangWuXinXi',
       component: () => import('./views/FangWuXinXi')
+    },
+    //人口信息
+    {
+      path: '/renkouxinxi',
+      name: 'RenKouXinXi',
+      component: () => import('./views/RenKouXinXi')
+    },
+    //设备信息
+    {
+      path: '/shebeixinxi',
+      name: 'SheBeiXinXi',
+      component: () => import('./views/SheBeiXinXi')
+    },
+    //用户管理
+    {
+      path: '/yonghuguanli',
+      name: 'YongHuGuanLi',
+      component: () => import('./views/YongHuGuanLi')
+    },
+    //角色管理
+    {
+      path: '/jueseguanli',
+      name: 'JueSeGuanLi',
+      component: () => import('./views/JueSeGuanLi')
     }
   ]
 })
