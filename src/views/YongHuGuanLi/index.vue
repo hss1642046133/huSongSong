@@ -5,7 +5,7 @@
       <Sidebar id="sidebar"></Sidebar>
       <div id="zhuti">
         <div class="zhuti-div1">
-          <p>人口信息</p>
+          <p>用户管理</p>
         </div>
         <div class="zhuti-div2">
           <div class="zhuti-div2-div1">
@@ -21,21 +21,22 @@
           </div>
           <div class="zhuti-div2-div2">
             <el-table :header-cell-style="{background:'#623bfe',color:'#ffffff'}" :data="tableData" border style="width: 100%">
-              <el-table-column header-align="center" align="center" prop="serial" label="序号" width="150">
+              <el-table-column header-align="center" align="center" prop="serial" label="序号" width="145">
               </el-table-column>
-              <el-table-column header-align="center" align="center" prop="name" label="业主姓名" width="150">
+              <el-table-column header-align="center" align="center" prop="user" label="用户名" width="145">
               </el-table-column>
-              <el-table-column header-align="center" align="center" prop="sex" label="性别" width="150">
+              <el-table-column header-align="center" align="center" prop="role" label="用户角色" width="145">
               </el-table-column>
-              <el-table-column header-align="center" align="center" prop="id" label="身份证号" width="150">
+              <el-table-column header-align="center" align="center" prop="name" label="用户姓名" width="145">
               </el-table-column>
-              <el-table-column header-align="center" align="center" prop="contact" label="联系方式" width="150">
+              <el-table-column header-align="center" align="center" prop="contact" label="联系方式" width="145">
               </el-table-column>
-              <el-table-column header-align="center" align="center" prop="address" label="住址" width="150">
+              <el-table-column header-align="center" align="center" prop="note" label="用户备注" width="145">
               </el-table-column>
               <el-table-column header-align="center" align="center" prop="operation" label="操作">
                 <div class="el-table-column-div">
                   <ul class="el-table-column-div-ul">
+                    <li>重置密码</li>
                     <li>修改</li>
                     <li>删除</li>
                   </ul>
@@ -77,38 +78,38 @@ export default {
       tableData: [
         {
           serial: "1",
-          name: "zhangs",
-          sex: "系统管理员",
-          id: "张三",
+          user: "zhangs",
+          role: "系统管理员",
+          name: "张三",
           contact: "13578955591",
-          address: "1栋101室",
+          note: "1栋101室",
           operation:'删除'
         },
         {
           serial: "2",
-          name: "lisi",
-          sex: "社区管理员",
-          id: "李四",
+          user: "lisi",
+          role: "社区管理员",
+          name: "李四",
           contact: "13578955592",
-          address: "1栋102室",
+          note: "1栋102室",
           operation:'删除'
         },
         {
           serial: "3",
-          name: "wangwu",
-          sex: "运维人员",
-          id: "王五",
+          user: "wangwu",
+          role: "运维人员",
+          name: "王五",
           contact: "13578955593",
-          address: "1栋103室",
+          note: "1栋103室",
           operation:'删除'
         },
         {
           serial: "4",
-          name: "zhaoliu",
-          sex: "物业人员",
-          id: "赵六",
+          user: "zhaoliu",
+          role: "物业人员",
+          name: "赵六",
           contact: "13578955594",
-          address: "1栋104室",
+          note: "1栋104室",
           operation:'删除'
         }
       ]
@@ -183,6 +184,9 @@ export default {
   color: #623bfe;
 }
 .el-table-column-div-ul li:nth-of-type(2){
+  color: #623bfe;
+}
+.el-table-column-div-ul li:nth-of-type(3){
   color: red;
 }
 .shuifei-div2-div3{

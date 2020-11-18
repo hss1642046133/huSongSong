@@ -5,7 +5,7 @@
       <Sidebar id="sidebar"></Sidebar>
       <div id="zhuti">
         <div class="zhuti-div1">
-          <p>人口信息</p>
+          <p>角色管理</p>
         </div>
         <div class="zhuti-div2">
           <div class="zhuti-div2-div1">
@@ -21,17 +21,11 @@
           </div>
           <div class="zhuti-div2-div2">
             <el-table :header-cell-style="{background:'#623bfe',color:'#ffffff'}" :data="tableData" border style="width: 100%">
-              <el-table-column header-align="center" align="center" prop="serial" label="序号" width="150">
+              <el-table-column header-align="center" align="center" prop="serial" label="序号" width="260">
               </el-table-column>
-              <el-table-column header-align="center" align="center" prop="name" label="业主姓名" width="150">
+              <el-table-column header-align="center" align="center" prop="name" label="角色名称" width="260">
               </el-table-column>
-              <el-table-column header-align="center" align="center" prop="sex" label="性别" width="150">
-              </el-table-column>
-              <el-table-column header-align="center" align="center" prop="id" label="身份证号" width="150">
-              </el-table-column>
-              <el-table-column header-align="center" align="center" prop="contact" label="联系方式" width="150">
-              </el-table-column>
-              <el-table-column header-align="center" align="center" prop="address" label="住址" width="150">
+              <el-table-column header-align="center" align="center" prop="remark" label="角色备注" width="260">
               </el-table-column>
               <el-table-column header-align="center" align="center" prop="operation" label="操作">
                 <div class="el-table-column-div">
@@ -77,38 +71,26 @@ export default {
       tableData: [
         {
           serial: "1",
-          name: "zhangs",
-          sex: "系统管理员",
-          id: "张三",
-          contact: "13578955591",
-          address: "1栋101室",
+          name: "系统管理员",
+          remark: "系统管理员",
           operation:'删除'
         },
         {
           serial: "2",
-          name: "lisi",
-          sex: "社区管理员",
-          id: "李四",
-          contact: "13578955592",
-          address: "1栋102室",
+          name: "社区管理员",
+          remark: "社区管理员",
           operation:'删除'
         },
         {
           serial: "3",
-          name: "wangwu",
-          sex: "运维人员",
-          id: "王五",
-          contact: "13578955593",
-          address: "1栋103室",
+          name: "运维人员",
+          remark: "运维人员",
           operation:'删除'
         },
         {
           serial: "4",
-          name: "zhaoliu",
-          sex: "物业人员",
-          id: "赵六",
-          contact: "13578955594",
-          address: "1栋104室",
+          name: "物业人员",
+          remark: "物业人员",
           operation:'删除'
         }
       ]

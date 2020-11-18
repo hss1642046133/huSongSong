@@ -231,11 +231,6 @@ export default {
   text-align: right;
   margin: 10px 20px;
 }
-
-
-
-
-
 .zhuti-div2-div2 {
   display: flex;
   justify-content: space-around;

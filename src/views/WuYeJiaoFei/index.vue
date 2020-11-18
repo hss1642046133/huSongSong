@@ -13,7 +13,7 @@
             <el-row>
               <el-button @click="Click1" type="primary" plain>水费</el-button>
               <el-button @click="Click2" type="primary" plain>电费</el-button>
-              <el-button type="primary" plain>停车费</el-button>
+              <el-button @click="Click3" type="primary" plain>停车费</el-button>
               <el-button type="primary" plain>燃气费</el-button>
               <el-button type="primary" plain>固话宽带</el-button>
               <el-button type="primary" plain>有线电视</el-button>
@@ -44,6 +44,9 @@ export default {
     },
     Click2: function () {
       this.$router.push("/wuyejiaofei/dianfei");
+    },
+    Click3: function () {
+      this.$router.push("/wuyejiaofei/TingCheFei");
     },
   },
 };

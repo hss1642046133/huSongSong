@@ -37,6 +37,12 @@ export default new Router({
           path: 'dianfei',
           name: 'DianFei',
           component: () => import('./components/DianFei')
+        },
+        //停车费
+        {
+          path: 'tingchefei',
+          name: 'TingCheFei',
+          component: () => import('./components/TingCheFei')
         }
       ]
     },
@@ -141,6 +147,12 @@ export default new Router({
       path: '/shebeixinxi',
       name: 'SheBeiXinXi',
       component: () => import('./views/SheBeiXinXi')
+    },
+    //电子地图
+    {
+      path: '/dianziditu',
+      name: 'DianZiDiTu',
+      component: () => import('./views/DianZiDiTu')
     },
     //用户管理
     {

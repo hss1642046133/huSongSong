@@ -64,7 +64,7 @@
               <el-menu-item index="/fangwuxinxi">房屋信息</el-menu-item>
               <el-menu-item index="/renkouxinxi">人口信息</el-menu-item>
               <el-menu-item index="/shebeixinxi">设备信息</el-menu-item>
-              <el-menu-item index="6-4">电子地图</el-menu-item>
+              <el-menu-item index="/dianziditu">电子地图</el-menu-item>
             </el-menu-item-group>
           </el-submenu>
           <el-submenu index="7">
