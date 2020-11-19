@@ -1,5 +1,5 @@
 <template>
-  <div id="dianfei">
+  <div id="tingchefei">
     <div class="dianfei-div1">
       <el-button @click="Click" type="primary" plain>查看历史账单</el-button>
     </div>
@@ -7,171 +7,76 @@
       <ul class="dianfei-div2-ul">
         <li>
           <div>
-            <span>2019-08-13</span>
-            <span>电费</span>
+            <p>湘A23J89</p>
+            <p>长沙XXX社区停车场</p>
           </div>
           <div>
-            <span>小星社区1栋2单元5楼0501室</span>
-            <span>小张</span>
-          </div>
-          <div>
-            <p>
-              <span>￥</span>
-              <span>300.00</span>
-            </p>
+            <p>入场时间: 2019-08-13 12:30</p>
+            <p>停车时长: 1天2小时30分<span>05</span>秒</p>
+            <p>缴费金额: <span>20</span>元</p>
             <p>立即缴费</p>
           </div>
         </li>
         <li>
           <div>
-            <span>2019-08-13</span>
-            <span>电费</span>
+            <p>湘A23J89</p>
+            <p>长沙XXX社区停车场</p>
           </div>
           <div>
-            <span>小星社区1栋2单元5楼0501室</span>
-            <span>小张</span>
-          </div>
-          <div>
-            <p>
-              <span>￥</span>
-              <span>300.00</span>
-            </p>
-            <p>
-              <span>立即缴费</span>
-            </p>
+            <p>入场时间: 2019-08-13 12:30</p>
+            <p>停车时长: 1天2小时30分<span>05</span>秒</p>
+            <p>缴费金额: <span>20</span>元</p>
+            <p>立即缴费</p>
           </div>
         </li>
         <li>
           <div>
-            <span>2019-08-13</span>
-            <span>电费</span>
+            <p>湘A23J89</p>
+            <p>长沙XXX社区停车场</p>
           </div>
           <div>
-            <span>小星社区1栋2单元5楼0501室</span>
-            <span>小张</span>
-          </div>
-          <div>
-            <p>
-              <span>￥</span>
-              <span>300.00</span>
-            </p>
-            <p>
-              <span>立即缴费</span>
-            </p>
+            <p>入场时间: 2019-08-13 12:30</p>
+            <p>停车时长: 1天2小时30分<span>05</span>秒</p>
+            <p>缴费金额: <span>20</span>元</p>
+            <p>立即缴费</p>
           </div>
         </li>
       </ul>
       <ul class="dianfei-div2-ul">
         <li>
           <div>
-            <span>2019-08-13</span>
-            <span>电费</span>
+            <p>湘A23J89</p>
+            <p>长沙XXX社区停车场</p>
           </div>
           <div>
-            <span>小星社区1栋2单元5楼0501室</span>
-            <span>小张</span>
-          </div>
-          <div>
-            <p>
-              <span>￥</span>
-              <span>300.00</span>
-            </p>
+            <p>入场时间: 2019-08-13 12:30</p>
+            <p>停车时长: 1天2小时30分<span>05</span>秒</p>
+            <p>缴费金额: <span>20</span>元</p>
             <p>立即缴费</p>
           </div>
         </li>
         <li>
           <div>
-            <span>2019-08-13</span>
-            <span>电费</span>
+            <p>湘A23J89</p>
+            <p>长沙XXX社区停车场</p>
           </div>
           <div>
-            <span>小星社区1栋2单元5楼0501室</span>
-            <span>小张</span>
-          </div>
-          <div>
-            <p>
-              <span>￥</span>
-              <span>300.00</span>
-            </p>
-            <p>
-              <span>立即缴费</span>
-            </p>
-          </div>
-        </li>
-        <li>
-          <div>
-            <span>2019-08-13</span>
-            <span>电费</span>
-          </div>
-          <div>
-            <span>小星社区1栋2单元5楼0501室</span>
-            <span>小张</span>
-          </div>
-          <div>
-            <p>
-              <span>￥</span>
-              <span>300.00</span>
-            </p>
-            <p>
-              <span>立即缴费</span>
-            </p>
-          </div>
-        </li>
-      </ul>
-      <ul class="dianfei-div2-ul">
-        <li>
-          <div>
-            <span>2019-08-13</span>
-            <span>电费</span>
-          </div>
-          <div>
-            <span>小星社区1栋2单元5楼0501室</span>
-            <span>小张</span>
-          </div>
-          <div>
-            <p>
-              <span>￥</span>
-              <span>300.00</span>
-            </p>
+            <p>入场时间: 2019-08-13 12:30</p>
+            <p>停车时长: 1天2小时30分<span>05</span>秒</p>
+            <p>缴费金额: <span>20</span>元</p>
             <p>立即缴费</p>
           </div>
         </li>
         <li>
           <div>
-            <span>2019-08-13</span>
-            <span>电费</span>
+            <p>湘A23J89</p>
+            <p>长沙XXX社区停车场</p>
           </div>
           <div>
-            <span>小星社区1栋2单元5楼0501室</span>
-            <span>小张</span>
-          </div>
-          <div>
-            <p>
-              <span>￥</span>
-              <span>300.00</span>
-            </p>
-            <p>
-              <span>立即缴费</span>
-            </p>
-          </div>
-        </li>
-        <li>
-          <div>
-            <span>2019-08-13</span>
-            <span>电费</span>
-          </div>
-          <div>
-            <span>小星社区1栋2单元5楼0501室</span>
-            <span>小张</span>
-          </div>
-          <div>
-            <p>
-              <span>￥</span>
-              <span>300.00</span>
-            </p>
-            <p>
-              <span>立即缴费</span>
-            </p>
+            <p>入场时间: 2019-08-13 12:30</p>
+            <p>停车时长: 1天2小时30分<span>05</span>秒</p>
+            <p>缴费金额: <span>20</span>元</p>
+            <p>立即缴费</p>
           </div>
         </li>
       </ul>
@@ -204,7 +109,7 @@ export default {
 </script>
 
 <style scoped>
-#dianfei {
+#tingchefei {
   width: 100%;
   border: 1px solid #ededff;
 }
@@ -234,55 +139,53 @@ export default {
   justify-content: space-around;
   margin: 20px 60px 0 60px;
 }
-.dianfei-div2-ul li {
-  width: 270px;
-  height: 148px;
-  border: 1px solid #ececff;
-  border-radius: 10px;
-  display: inline-block;
-  background-color: #f9f9ff;
+.dianfei-div2-ul li div:nth-of-type(1){
+  height: 90px;
+  width: 190px;
+  background: #bdbdff;
+  border-radius: 50% 50% 0 0;
+  text-align: center;
+  color: #ffffff;
 }
-.dianfei-div2-ul li div:nth-of-type(1) {
-  margin-top: 20px;
+.dianfei-div2-ul li div:nth-of-type(1) p:nth-of-type(1){
+  font-size: 24px;
+  padding-top: 25px
 }
-.dianfei-div2-ul li div:nth-of-type(1) span:nth-of-type(1) {
-  margin-left: 20px;
-  font-weight: bold;
+.dianfei-div2-ul li div:nth-of-type(1) p:nth-of-type(2){
+  font-size: 12px;
 }
-.dianfei-div2-ul li div:nth-of-type(1) span:nth-of-type(2) {
-  margin-left: 20px;
-  font-weight: bold;
+.dianfei-div2-ul li div:nth-of-type(2){
+  height: 145px;
+  width: 188px;
+  border: 1px solid #bdbdff;
+  font-size: 12px;
 }
-.dianfei-div2-ul li div:nth-of-type(2) {
-  margin-top: 20px;
+.dianfei-div2-ul li div:nth-of-type(2) p{
+  margin-top: 15px;
 }
-.dianfei-div2-ul li div:nth-of-type(2) span:nth-of-type(1) {
-  margin-left: 20px;
+.dianfei-div2-ul li div:nth-of-type(2) p:nth-of-type(1){
+  margin-left: 15px;
 }
-.dianfei-div2-ul li div:nth-of-type(2) span:nth-of-type(2) {
-  margin-left: 20px;
+.dianfei-div2-ul li div:nth-of-type(2) p:nth-of-type(2){
+  margin-left: 15px;
 }
-.dianfei-div2-ul li div:nth-of-type(3) {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 20px 0 20px;
-  margin-top: 20px;
-  border-top: 1px solid #ffffff;
+.dianfei-div2-ul li div:nth-of-type(2) p:nth-of-type(3){
+  margin-left: 15px;
 }
-.dianfei-div2-ul li div:nth-of-type(3) p:nth-of-type(1) span:nth-of-type(1) {
-  color: #ff6600;
-}
-.dianfei-div2-ul li div:nth-of-type(3) p:nth-of-type(1) span:nth-of-type(2) {
-  color: #75c0ff;
-}
-.dianfei-div2-ul li div:nth-of-type(3) p:nth-of-type(2) {
-  line-height: 22px;
+.dianfei-div2-ul li div:nth-of-type(2) p:nth-of-type(4){
+  line-height: 28px;
   border-radius: 3px;
   background-color: #b9b9ff;
   padding: 0 6px;
   font-size: 12px;
   color: #ffffff;
   cursor: pointer;
+  text-align: center;
+  margin: 15px 15px 0 15px;
+}
+.dianfei-div2-ul li div:nth-of-type(2) p span{
+  color: red;
+  font-weight: bold;
 }
 .dianfei-div3{
   margin-top: 100px;

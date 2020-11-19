@@ -43,6 +43,30 @@ export default new Router({
           path: 'tingchefei',
           name: 'TingCheFei',
           component: () => import('./components/TingCheFei')
+        },
+        //燃气费
+        {
+          path: 'ranqifei',
+          name: 'RanQiFei',
+          component: () => import('./components/RanQiFei')
+        },
+        //固话宽带
+        {
+          path: 'guhuakuandai',
+          name: 'GuHuaKuanDai',
+          component: () => import('./components/GuHuaKuanDai')
+        },
+        //有线电视
+        {
+          path: 'youxiandianshi',
+          name: 'YouXianDianShi',
+          component: () => import('./components/YouXianDianShi')
+        },
+        //物业费
+        {
+          path: 'wuyefei',
+          name: 'WuYeFei',
+          component: () => import('./components/WuYeFei')
         }
       ]
     },

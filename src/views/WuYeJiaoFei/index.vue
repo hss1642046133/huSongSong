@@ -14,10 +14,10 @@
               <el-button @click="Click1" type="primary" plain>水费</el-button>
               <el-button @click="Click2" type="primary" plain>电费</el-button>
               <el-button @click="Click3" type="primary" plain>停车费</el-button>
-              <el-button type="primary" plain>燃气费</el-button>
-              <el-button type="primary" plain>固话宽带</el-button>
-              <el-button type="primary" plain>有线电视</el-button>
-              <el-button type="primary" plain>物业费</el-button>
+              <el-button @click="Click4" type="primary" plain>燃气费</el-button>
+              <el-button @click="Click5" type="primary" plain>固话宽带</el-button>
+              <el-button @click="Click6" type="primary" plain>有线电视</el-button>
+              <el-button @click="Click7" type="primary" plain>物业费</el-button>
             </el-row>
           </div>
         </div>
@@ -48,6 +48,18 @@ export default {
     Click3: function () {
       this.$router.push("/wuyejiaofei/TingCheFei");
     },
+    Click4: function () {
+      this.$router.push("/wuyejiaofei/RanQiFei");
+    },
+    Click5: function () {
+      this.$router.push("/wuyejiaofei/guhuakuandai");
+    },
+    Click6: function () {
+      this.$router.push("/wuyejiaofei/youxiandianshi");
+    },
+    Click7: function () {
+      this.$router.push("/wuyejiaofei/wuyefei");
+    }
   },
 };
 </script>
