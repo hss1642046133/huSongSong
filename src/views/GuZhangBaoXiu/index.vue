@@ -1,78 +1,56 @@
 <template>
-  <div id="content">
-    <Header id="header"></Header>
-    <section id="section">
-      <Sidebar id="sidebar"></Sidebar>
-      <div id="zhuti">
-        <div class="zhuti-div1">
-          <p>物业报修</p>
-        </div>
-        <div class="zhuti-div2">
-          <el-tabs v-model="activeName" type="card" @tab-click="handleClick">
-            <el-tab-pane label="公共报修 （4 | 2）" name="first">
-              <GongGongBaoXiu></GongGongBaoXiu>
-            </el-tab-pane>
-            <el-tab-pane label="个人报修 （4 | 2）" name="second">
-              <GeRenBaoXiu></GeRenBaoXiu>
-            </el-tab-pane>
-          </el-tabs>
-          <div class="shuifei-div2-div1">
-            <ul class="shuifei-div2-div1-ul">
-              <li>
-                <span>总账单数:100/条</span>
-                <span>页数:1/9</span>
-                <span>每页:12/条</span>
-              </li>
-              <li>
-                <el-pagination background layout="prev, pager, next" :total="90">
-                </el-pagination>
-              </li>
-            </ul>
-          </div>
-        </div>
+  <div id="zhuti">
+    <div class="zhuti-div1">
+      <p>物业报修</p>
+    </div>
+    <div class="zhuti-div2">
+      <el-tabs v-model="activeName" type="card" @tab-click="handleClick">
+        <el-tab-pane label="公共报修 （4 | 2）" name="first">
+          <GongGongBaoXiu></GongGongBaoXiu>
+        </el-tab-pane>
+        <el-tab-pane label="个人报修 （4 | 2）" name="second">
+          <GeRenBaoXiu></GeRenBaoXiu>
+        </el-tab-pane>
+      </el-tabs>
+      <div class="shuifei-div2-div1">
+        <ul class="shuifei-div2-div1-ul">
+          <li>
+            <span>总账单数:100/条</span>
+            <span>页数:1/9</span>
+            <span>每页:12/条</span>
+          </li>
+          <li>
+            <el-pagination background layout="prev, pager, next" :total="90"></el-pagination>
+          </li>
+        </ul>
       </div>
-    </section>
+    </div>
   </div>
 </template>
 
 <script>
-import Header from "../../components/Header";
-import Sidebar from "../../components/Sidebar";
 import GongGongBaoXiu from "../../components/GongGongBaoXiu";
 import GeRenBaoXiu from "../../components/GeRenBaoXiu";
 export default {
   name: "GuZhangBaoXiu",
   components: {
-    Header,
-    Sidebar,
     GongGongBaoXiu,
     GeRenBaoXiu
   },
   data() {
     return {
-      activeName: "first",
+      activeName: "first"
     };
   },
   methods: {
     handleClick(tab, event) {
       console.log(tab, event);
-    },
-  },
+    }
+  }
 };
 </script>
 
 <style scoped>
-::-webkit-scrollbar {
-  display: none;
-}
-#sidebar {
-  position: fixed;
-  left: 10px;
-  top: 100px;
-  height: 100%;
-  background-color: #623bfe;
-  width: 18%;
-}
 #zhuti {
   position: absolute;
   left: 20%;
@@ -109,17 +87,17 @@ export default {
   background-color: #623bfe;
   color: #ffffff;
 }
-.shuifei-div2-div1{
+.shuifei-div2-div1 {
   border-top: 1px solid #f0f0ff;
   padding: 10px 0;
   margin-top: 100px;
 }
-.shuifei-div2-div1-ul{
+.shuifei-div2-div1-ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-.shuifei-div2-div1-ul li:nth-of-type(1) span~span{
+.shuifei-div2-div1-ul li:nth-of-type(1) span ~ span {
   margin-left: 20px;
 }
 </style>

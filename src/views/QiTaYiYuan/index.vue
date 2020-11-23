@@ -1,104 +1,84 @@
 <template>
-  <div id="content">
-    <Header id="header"></Header>
-    <section id="section">
-      <Sidebar id="sidebar"></Sidebar>
-      <div id="zhuti">
-        <div class="zhuti-div1">
-          <p>预约挂号</p>
-        </div>
-        <div class="zhuti-div2">
-          <div class="zhuti-div2-div1">
-            <ul class="zhuti-div2-div1-ul">
-              <li>
-                <span>返回</span>
-                <span>类型：</span>
-                <el-radio v-model="radio" label="1">全部医院</el-radio>
-                <el-radio v-model="radio" label="2">省级医院</el-radio>
-                <el-radio v-model="radio" label="3">市级医院</el-radio>
-                <el-radio v-model="radio" label="4">专科医院</el-radio>
-                <el-radio v-model="radio" label="5">重点医院</el-radio>
-              </li>
-              <li>
-                <el-input placeholder="请输入医院名称" v-model="input" clearable>
-                </el-input>
-                <el-button type="primary">搜索</el-button>
-              </li>
-            </ul>
-          </div>
-          <div class="zhuti-div2-div2">
-            <ul class="zhuti-div2-div2-ul">
-              <li>湘雅二医院</li>
-              <li>湘雅三医院</li>
-              <li>湘雅口腔医院</li>
-              <li>长沙市一医院</li>
-            </ul>
-            <ul class="zhuti-div2-div2-ul1">
-              <li>长沙市二医院</li>
-              <li>长沙市三医院</li>
-              <li>长沙市四医院</li>
-              <li>长沙市妇幼保键院</li>
-            </ul>
-            <ul class="zhuti-div2-div2-ul2">
-              <li>湖南省儿童医院</li>
-              <li>湖南省妇幼保键院</li>
-              <li>湖南省人民医院</li>
-              <li>湖南省xxx医院</li>
-            </ul>
-          </div>
-          <div class="shuifei-div2-div3">
-            <img src="../../assets/images/YuYueGuaHao/u1951.svg"/>
-            <span>点我加载</span>
-          </div>
-          <div class="shuifei-div2-div4">
-            <ul class="shuifei-div2-div4-ul">
-              <li>
-                <span>总记录数:100/条</span>
-                <span>页数:1/9</span>
-                <span>每页:12/条</span>
-              </li>
-              <li>
-                <el-pagination background layout="prev, pager, next" :total="90">
-                </el-pagination>
-              </li>
-            </ul>
-          </div>
-        </div>
+  <div id="zhuti">
+    <div class="zhuti-div1">
+      <p>预约挂号</p>
+    </div>
+    <div class="zhuti-div2">
+      <div class="zhuti-div2-div1">
+        <ul class="zhuti-div2-div1-ul">
+          <li>
+            <span @click="Click">返回</span>
+            <span>类型：</span>
+            <el-radio v-model="radio" label="1">全部医院</el-radio>
+            <el-radio v-model="radio" label="2">省级医院</el-radio>
+            <el-radio v-model="radio" label="3">市级医院</el-radio>
+            <el-radio v-model="radio" label="4">专科医院</el-radio>
+            <el-radio v-model="radio" label="5">重点医院</el-radio>
+          </li>
+          <li>
+            <el-input placeholder="请输入医院名称" v-model="input" clearable></el-input>
+            <el-button type="primary">搜索</el-button>
+          </li>
+        </ul>
       </div>
-    </section>
+      <div class="zhuti-div2-div2">
+        <ul class="zhuti-div2-div2-ul">
+          <li>湘雅二医院</li>
+          <li>湘雅三医院</li>
+          <li>湘雅口腔医院</li>
+          <li>长沙市一医院</li>
+        </ul>
+        <ul class="zhuti-div2-div2-ul1">
+          <li>长沙市二医院</li>
+          <li>长沙市三医院</li>
+          <li>长沙市四医院</li>
+          <li>长沙市妇幼保键院</li>
+        </ul>
+        <ul class="zhuti-div2-div2-ul2">
+          <li>湖南省儿童医院</li>
+          <li>湖南省妇幼保键院</li>
+          <li>湖南省人民医院</li>
+          <li>湖南省xxx医院</li>
+        </ul>
+      </div>
+      <div class="shuifei-div2-div3">
+        <img src="../../assets/images/YuYueGuaHao/u1951.svg" />
+        <span>点我加载</span>
+      </div>
+      <div class="shuifei-div2-div4">
+        <ul class="shuifei-div2-div4-ul">
+          <li>
+            <span>总记录数:100/条</span>
+            <span>页数:1/9</span>
+            <span>每页:12/条</span>
+          </li>
+          <li>
+            <el-pagination background layout="prev, pager, next" :total="90"></el-pagination>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import Header from "../../components/Header";
-import Sidebar from "../../components/Sidebar";
 export default {
   name: "QiTaYiYuan",
-  components: {
-    Header,
-    Sidebar,
-  },
   data() {
     return {
       radio: "1",
-      input: ''
+      input: ""
     };
   },
+  methods: {
+    Click: function() {
+      this.$router.go(-1);
+    }
+  }
 };
 </script>
 
 <style scoped>
-::-webkit-scrollbar {
-  display: none;
-}
-#sidebar {
-  position: fixed;
-  left: 10px;
-  top: 100px;
-  height: 100%;
-  background-color: #623bfe;
-  width: 18%;
-}
 #zhuti {
   position: absolute;
   left: 20%;
@@ -190,17 +170,17 @@ export default {
   line-height: 100px;
   border-radius: 10px;
 }
-.shuifei-div2-div3{
+.shuifei-div2-div3 {
   display: flex;
   justify-content: center;
   align-content: center;
   margin-top: 20px;
 }
-.shuifei-div2-div3 img{
+.shuifei-div2-div3 img {
   width: 30px;
   margin-right: 10px;
 }
-.shuifei-div2-div3 span{
+.shuifei-div2-div3 span {
   color: #623bfe;
   margin-top: 5px;
 }

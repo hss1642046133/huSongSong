@@ -1,95 +1,139 @@
 <template>
-  <div id="content">
-    <Header id="header"></Header>
-    <section id="section">
-      <Sidebar id="sidebar"></Sidebar>
-      <div id="zhuti">
-        <div class="zhuti-div1">
-          <p>车辆管理</p>
+  <div id="zhuti">
+    <div class="zhuti-div1">
+      <p>车辆管理</p>
+    </div>
+    <div class="zhuti-div2">
+      <div class="zhuti-div2-div1">
+        <div class="block">
+          <span class="demonstration">开始日期：</span>
+          <el-date-picker
+            v-model="value1"
+            align="right"
+            type="date"
+            placeholder="年/月/日"
+            :picker-options="pickerOptions"
+          ></el-date-picker>
         </div>
-        <div class="zhuti-div2">
-          <div class="zhuti-div2-div1">
-            <div class="block">
-              <span class="demonstration">开始日期：</span>
-              <el-date-picker v-model="value1" align="right" type="date" placeholder="年/月/日" :picker-options="pickerOptions">
-              </el-date-picker>
-            </div>
-            <div class="block">
-              <span class="demonstration">结束日期：</span>
-              <el-date-picker v-model="value2" align="right" type="date" placeholder="年/月/日" :picker-options="pickerOptions">
-              </el-date-picker>
-            </div>
-            <div class="block">
-              <el-date-picker v-model="value2" align="right" type="date" placeholder="年/月/日" :picker-options="pickerOptions">
-              </el-date-picker>
-            </div>
-            <div class="block">
-              <el-button type="primary" class="chaxun">查询</el-button>
-            </div>
-            <div class="block">
-              <el-button type="primary" class="chaxun">添加</el-button>
-            </div>
-          </div>
-          <div class="zhuti-div2-div2">
-            <el-table :header-cell-style="{background:'#623bfe',color:'#ffffff'}" :data="tableData" border style="width: 100%">
-              <el-table-column header-align="center" align="center" prop="date" label="创建日期" width="160">
-              </el-table-column>
-              <el-table-column header-align="center" align="center" prop="name" label="车辆名称" width="120">
-              </el-table-column>
-              <el-table-column header-align="center" align="center" prop="model" label="车辆型号" width="150">
-                <div>
-                  <span>A区 地下停车场...</span>
-                  <i class="el-icon-location"></i>
-                </div>
-              </el-table-column>
-              <el-table-column header-align="center" align="center" prop="plate" label="车辆车牌" width="120">
-              </el-table-column>
-              <el-table-column header-align="center" align="center" prop="photograph" label="车身照片" width="120">
-                <img style="width: 60px;" src="../../assets/images/CheLiangGuanLi/u2426.png"/>
-              </el-table-column>
-              <el-table-column header-align="center" align="center" prop="remark" label="车辆备注" width="120">
-              </el-table-column>
-              <el-table-column header-align="center" align="center" prop="stall" label="绑定车位" width="120">
-              </el-table-column>
-              <el-table-column header-align="center" align="center" prop="operation" label="操作">
-                <div class="el-table-column-div">
-                  <ul class="el-table-column-div-ul">
-                    <li>修改</li>
-                    <li>删除</li>
-                    <li>详情</li>
-                  </ul>
-                </div>
-              </el-table-column>
-            </el-table>
-          </div>
-          <div class="shuifei-div2-div3">
-            <ul class="shuifei-div2-div3-ul">
-              <li>
-                <span>总账单数:100/条</span>
-                <span>页数:1/9</span>
-                <span>每页:12/条</span>
-              </li>
-              <li>
-                <el-pagination background layout="prev, pager, next" :total="90">
-                </el-pagination>
-              </li>
-            </ul>
-          </div>
+        <div class="block">
+          <span class="demonstration">结束日期：</span>
+          <el-date-picker
+            v-model="value2"
+            align="right"
+            type="date"
+            placeholder="年/月/日"
+            :picker-options="pickerOptions"
+          ></el-date-picker>
+        </div>
+        <div class="block">
+          <el-date-picker
+            v-model="value2"
+            align="right"
+            type="date"
+            placeholder="年/月/日"
+            :picker-options="pickerOptions"
+          ></el-date-picker>
+        </div>
+        <div class="block">
+          <el-button type="primary" class="chaxun">查询</el-button>
+        </div>
+        <div class="block">
+          <el-button type="primary" class="chaxun">添加</el-button>
         </div>
       </div>
-    </section>
+      <div class="zhuti-div2-div2">
+        <el-table
+          :header-cell-style="{background:'#623bfe',color:'#ffffff'}"
+          :data="tableData"
+          border
+          style="width: 100%"
+        >
+          <el-table-column
+            header-align="center"
+            align="center"
+            prop="date"
+            label="创建日期"
+            width="160"
+          ></el-table-column>
+          <el-table-column
+            header-align="center"
+            align="center"
+            prop="name"
+            label="车辆名称"
+            width="120"
+          ></el-table-column>
+          <el-table-column
+            header-align="center"
+            align="center"
+            prop="model"
+            label="车辆型号"
+            width="150"
+          >
+            <div>
+              <span>A区 地下停车场...</span>
+              <i class="el-icon-location"></i>
+            </div>
+          </el-table-column>
+          <el-table-column
+            header-align="center"
+            align="center"
+            prop="plate"
+            label="车辆车牌"
+            width="120"
+          ></el-table-column>
+          <el-table-column
+            header-align="center"
+            align="center"
+            prop="photograph"
+            label="车身照片"
+            width="120"
+          >
+            <img style="width: 60px;" src="../../assets/images/CheLiangGuanLi/u2426.png" />
+          </el-table-column>
+          <el-table-column
+            header-align="center"
+            align="center"
+            prop="remark"
+            label="车辆备注"
+            width="120"
+          ></el-table-column>
+          <el-table-column
+            header-align="center"
+            align="center"
+            prop="stall"
+            label="绑定车位"
+            width="120"
+          ></el-table-column>
+          <el-table-column header-align="center" align="center" prop="operation" label="操作">
+            <div class="el-table-column-div">
+              <ul class="el-table-column-div-ul">
+                <li>修改</li>
+                <li>删除</li>
+                <li>详情</li>
+              </ul>
+            </div>
+          </el-table-column>
+        </el-table>
+      </div>
+      <div class="shuifei-div2-div3">
+        <ul class="shuifei-div2-div3-ul">
+          <li>
+            <span>总账单数:100/条</span>
+            <span>页数:1/9</span>
+            <span>每页:12/条</span>
+          </li>
+          <li>
+            <el-pagination background layout="prev, pager, next" :total="90"></el-pagination>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import Header from "../../components/Header";
-import Sidebar from "../../components/Sidebar";
 export default {
   name: "CheLiangGuanLi",
-  components: {
-    Header,
-    Sidebar,
-  },
   data() {
     return {
       pickerOptions: {
@@ -101,7 +145,7 @@ export default {
             text: "今天",
             onClick(picker) {
               picker.$emit("pick", new Date());
-            },
+            }
           },
           {
             text: "昨天",
@@ -109,7 +153,7 @@ export default {
               const date = new Date();
               date.setTime(date.getTime() - 3600 * 1000 * 24);
               picker.$emit("pick", date);
-            },
+            }
           },
           {
             text: "一周前",
@@ -117,9 +161,9 @@ export default {
               const date = new Date();
               date.setTime(date.getTime() - 3600 * 1000 * 24 * 7);
               picker.$emit("pick", date);
-            },
-          },
-        ],
+            }
+          }
+        ]
       },
       value1: "",
       value2: "",
@@ -132,7 +176,7 @@ export default {
           photograph: "照片1",
           remark: "-",
           stall: "A001",
-          operation:'删除'
+          operation: "删除"
         },
         {
           date: "2019-09-01 10:12:11",
@@ -142,7 +186,7 @@ export default {
           photograph: "照片1",
           remark: "-",
           stall: "A002",
-          operation:'删除'
+          operation: "删除"
         },
         {
           date: "2019-09-01 10:12:11",
@@ -152,7 +196,7 @@ export default {
           photograph: "照片1",
           remark: "-",
           stall: "A003",
-          operation:'删除'
+          operation: "删除"
         },
         {
           date: "2019-09-01 10:12:11",
@@ -162,7 +206,7 @@ export default {
           photograph: "照片1",
           remark: "-",
           stall: "A004",
-          operation:'删除'
+          operation: "删除"
         }
       ]
     };
@@ -171,17 +215,6 @@ export default {
 </script>
 
 <style scoped>
-::-webkit-scrollbar {
-  display: none;
-}
-#sidebar {
-  position: fixed;
-  left: 10px;
-  top: 100px;
-  height: 100%;
-  background-color: #623bfe;
-  width: 18%;
-}
 #zhuti {
   position: absolute;
   left: 20%;
@@ -219,61 +252,62 @@ export default {
   margin-right: 30px;
   margin: 0;
 }
-.el-date-editor.el-input, .el-date-editor.el-input__inner {
-    width: 200px;
+.el-date-editor.el-input,
+.el-date-editor.el-input__inner {
+  width: 200px;
 }
-.zhuti-div2-div2{
+.zhuti-div2-div2 {
   margin: 20px 10px 200px 10px;
 }
-.el-table-column-div-ul li{
+.el-table-column-div-ul li {
   display: inline-block;
   padding: 0 5px;
   cursor: pointer;
 }
-.el-table-column-div-ul li:nth-of-type(1){
+.el-table-column-div-ul li:nth-of-type(1) {
   color: #623bfe;
 }
-.el-table-column-div-ul li:nth-of-type(2){
+.el-table-column-div-ul li:nth-of-type(2) {
   color: red;
 }
-.el-table-column-div-ul li:nth-of-type(3){
+.el-table-column-div-ul li:nth-of-type(3) {
   color: #009688;
 }
 ::v-deep .el-dialog__header {
   background-color: #623bfe;
 }
-::v-deep .el-dialog__title{
+::v-deep .el-dialog__title {
   color: #ffffff;
 }
-.blocks{
+.blocks {
   display: flex;
   align-items: center;
 }
-.blocks1{
+.blocks1 {
   display: flex;
   margin-top: 10px;
 }
-.blocks~.blocks{
+.blocks ~ .blocks {
   margin-top: 10px;
 }
-::v-deep .kd{
+::v-deep .kd {
   width: 80%;
 }
-i{
+i {
   color: #623bfe;
   font-size: 20px;
 }
-.shuifei-div2-div3{
+.shuifei-div2-div3 {
   border-top: 1px solid #f0f0ff;
   padding: 10px 0;
   margin-top: 100px;
 }
-.shuifei-div2-div3-ul{
+.shuifei-div2-div3-ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-.shuifei-div2-div3-ul li:nth-of-type(1) span~span{
+.shuifei-div2-div3-ul li:nth-of-type(1) span ~ span {
   margin-left: 20px;
 }
 </style>

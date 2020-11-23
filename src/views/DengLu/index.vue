@@ -68,7 +68,7 @@ export default {
       submitForm(formName) {
         this.$refs[formName].validate((valid) => {
           if (valid) {
-            this.$router.push('/shouye');
+            this.$router.push('/zhuti');
           } else {
             console.log('error submit!!');
             return false;

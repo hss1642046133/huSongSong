@@ -1,81 +1,58 @@
 <template>
-  <div id="content">
-    <Header id="header"></Header>
-    <section id="section">
-      <Sidebar id="sidebar"></Sidebar>
-      <div id="zhuti">
-        <div class="zhuti-div1">
-          <p>物业缴费</p>
-        </div>
-        <div class="zhuti-div2">
-          <div class="zhuti-div2-div1">缴费类型</div>
-          <div class="zhuti-div2-div2">
-            <el-row>
-              <el-button @click="Click1" type="primary" plain>水费</el-button>
-              <el-button @click="Click2" type="primary" plain>电费</el-button>
-              <el-button @click="Click3" type="primary" plain>停车费</el-button>
-              <el-button @click="Click4" type="primary" plain>燃气费</el-button>
-              <el-button @click="Click5" type="primary" plain>固话宽带</el-button>
-              <el-button @click="Click6" type="primary" plain>有线电视</el-button>
-              <el-button @click="Click7" type="primary" plain>物业费</el-button>
-            </el-row>
-          </div>
-        </div>
-        <div class="zhuti-div3">
-          <router-view></router-view>
-        </div>
+  <div id="zhuti">
+    <div class="zhuti-div1">
+      <p>物业缴费</p>
+    </div>
+    <div class="zhuti-div2">
+      <div class="zhuti-div2-div1">缴费类型</div>
+      <div class="zhuti-div2-div2">
+        <el-row>
+          <el-button @click="Click1" type="primary" plain>水费</el-button>
+          <el-button @click="Click2" type="primary" plain>电费</el-button>
+          <el-button @click="Click3" type="primary" plain>停车费</el-button>
+          <el-button @click="Click4" type="primary" plain>燃气费</el-button>
+          <el-button @click="Click5" type="primary" plain>固话宽带</el-button>
+          <el-button @click="Click6" type="primary" plain>有线电视</el-button>
+          <el-button @click="Click7" type="primary" plain>物业费</el-button>
+        </el-row>
       </div>
-    </section>
+    </div>
+    <div class="zhuti-div3">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
 <script>
-import Header from "../../components/Header";
-import Sidebar from "../../components/Sidebar";
 export default {
   name: "WuYeJiaoFei",
-  components: {
-    Header,
-    Sidebar,
-  },
   methods: {
-    Click1: function () {
+    Click1: function() {
       this.$router.push("/wuyejiaofei/shuifei");
     },
-    Click2: function () {
+    Click2: function() {
       this.$router.push("/wuyejiaofei/dianfei");
     },
-    Click3: function () {
+    Click3: function() {
       this.$router.push("/wuyejiaofei/TingCheFei");
     },
-    Click4: function () {
+    Click4: function() {
       this.$router.push("/wuyejiaofei/RanQiFei");
     },
-    Click5: function () {
+    Click5: function() {
       this.$router.push("/wuyejiaofei/guhuakuandai");
     },
-    Click6: function () {
+    Click6: function() {
       this.$router.push("/wuyejiaofei/youxiandianshi");
     },
-    Click7: function () {
+    Click7: function() {
       this.$router.push("/wuyejiaofei/wuyefei");
     }
-  },
+  }
 };
 </script>
 
 <style scoped>
-::-webkit-scrollbar {
-  display: none;
-}
-#sidebar {
-  position: fixed;
-  left: 10px;
-  top: 100px;
-  height: 100%;
-  background-color: #623bfe;
-  width: 18%;
-}
 #zhuti {
   position: absolute;
   left: 20%;
